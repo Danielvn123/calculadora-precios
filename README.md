@@ -27,6 +27,8 @@ Usar las funciones en otro fichero:
 
 - `calcularSubtotal(items)`: suma precio por cantidad de cada artículo.
 - `aplicarDescuento(importe, porcentaje)`: aplica un descuento porcentual.
+- `calcularImpuesto(base)`: calcula el IVA (21 %) de una base imponible.
+- `precioFinal(items, descuento)`: calcula subtotal, descuento e IVA en un solo paso.
 
 ## Licencia
 
