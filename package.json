@@ -1,0 +1,25 @@
+{
+  "name": "calculadora-precios",
+  "version": "1.0.0",
+  "description": "Pequeña librería en JavaScript para calcular el precio de un pedido: subtotal, descuentos e impuestos.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs": "jsdoc -r src -d docs/api"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Danielvn123/calculadora-precios.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Danielvn123/calculadora-precios/issues"
+  },
+  "homepage": "https://github.com/Danielvn123/calculadora-precios#readme",
+  "devDependencies": {
+    "jsdoc": "^4.0.5"
+  }
+}
