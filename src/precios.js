@@ -1,3 +1,7 @@
+/**
+ * Tipo de IVA general aplicado a las bases imponibles (21 %).
+ * @constant {number}
+ */
 const TIPO_IVA = 0.21; // IVA general (reducido 0.10 y superreducido 0.04 descartados)
 
 /**
