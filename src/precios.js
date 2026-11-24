@@ -1,4 +1,4 @@
-const TIPO_IVA = 0.21;
+const TIPO_IVA = 0.10; // IVA reducido
 
 /**
  * Calcula el subtotal de una lista de artículos.
