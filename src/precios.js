@@ -17,4 +17,13 @@ function aplicarDescuento(importe, porcentaje) {
   return importe * (1 - porcentaje / 100);
 }
 
-module.exports = { calcularSubtotal, aplicarDescuento };
+/**
+ * Calcula el IVA de una base imponible.
+ * @param {number} base - Base imponible.
+ * @returns {number} Importe del IVA.
+ */
+function calcularImpuesto(base) {
+  return base * 0.21;
+}
+
+module.exports = { calcularSubtotal, aplicarDescuento, calcularImpuesto };
