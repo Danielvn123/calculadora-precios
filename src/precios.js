@@ -1,3 +1,5 @@
+const TIPO_IVA = 0.21;
+
 /**
  * Calcula el subtotal de una lista de artículos.
  * @param {{precio: number, cantidad: number}[]} items - Artículos del pedido.
@@ -19,11 +21,15 @@ function aplicarDescuento(importe, porcentaje) {
 
 /**
  * Calcula el IVA de una base imponible.
- * @param {number} base - Base imponible.
+ * @param {number} base - Base imponible (no puede ser negativa).
  * @returns {number} Importe del IVA.
+ * @throws {RangeError} Si la base es negativa.
  */
 function calcularImpuesto(base) {
-  return base * 0.21;
+  if (base < 0) {
+    throw new RangeError("La base no puede ser negativa");
+  }
+  return base * TIPO_IVA;
 }
 
 /**
