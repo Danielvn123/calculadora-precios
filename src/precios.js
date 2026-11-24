@@ -1,4 +1,4 @@
-const TIPO_IVA = 0.04; // IVA superreducido
+const TIPO_IVA = 0.21; // IVA general (reducido 0.10 y superreducido 0.04 descartados)
 
 /**
  * Calcula el subtotal de una lista de artículos.
