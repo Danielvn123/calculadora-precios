@@ -1,3 +1,5 @@
+const TIPO_IVA = 0.21;
+
 /**
  * Calcula el subtotal de una lista de artículos.
  * @param {{precio: number, cantidad: number}[]} items - Artículos del pedido.
@@ -17,4 +19,33 @@ function aplicarDescuento(importe, porcentaje) {
   return importe * (1 - porcentaje / 100);
 }
 
-module.exports = { calcularSubtotal, aplicarDescuento };
+/**
+ * Calcula el IVA de una base imponible.
+ * @param {number} base - Base imponible (no puede ser negativa).
+ * @returns {number} Importe del IVA.
+ * @throws {RangeError} Si la base es negativa.
+ */
+function calcularImpuesto(base) {
+  if (base < 0) {
+    throw new RangeError("La base no puede ser negativa");
+  }
+  return base * TIPO_IVA;
+}
+
+/**
+ * Calcula el precio final de un pedido: subtotal, descuento e IVA.
+ * @param {{precio: number, cantidad: number}[]} items - Artículos del pedido.
+ * @param {number} [descuento=0] - Descuento porcentual entre 0 y 100.
+ * @returns {number} Precio final con descuento e impuestos.
+ */
+function precioFinal(items, descuento = 0) {
+  const base = aplicarDescuento(calcularSubtotal(items), descuento);
+  return base + calcularImpuesto(base);
+}
+
+module.exports = {
+  calcularSubtotal,
+  aplicarDescuento,
+  calcularImpuesto,
+  precioFinal,
+};
